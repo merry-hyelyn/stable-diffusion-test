@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "stable-diffusion"
+version = "0.1.0"
+description = ""
+authors = ["merry-hyelyn <h1335@naver.com>"]
+readme = "README.md"
+packages = [{include = "stable_diffusion"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+django = "^4.1.7"
+djangorestframework = "^3.14.0"
+requests = "^2.28.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
