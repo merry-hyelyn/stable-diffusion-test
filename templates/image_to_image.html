@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'image.js'%}"></script>
+</head>
+<body>
+    <form id="stable_image-form" style="padding-bottom: 10px;">
+        <input type="text" name="prompt">
+        <input type="text" name="init_image" placeholder="링크를 넣어주세여">
+        <button id="img-to-img" type="button">submit</button>
+        
+    </form>
+    <h4>Init</h4>
+    <img id="preview_init_image" src="">
+    <h4>Result</h4>
+    <img id="result-img" src="">
+</body>
+
+</html>

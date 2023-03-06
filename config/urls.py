@@ -18,6 +18,8 @@ from django.urls import path
 from api import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.index, name="stable-input"),
-    path("stable-diffusion", views.StableDiffusionTestAPIView.as_view(), name='stable-diffusion-api' ),
+    path("text", views.text_to_image, name="text-inpit"),
+    path("image", views.image_to_image, name="image-input"),
+    path("stable-diffusion-text", views.StableDiffusionTextToImageAPIView.as_view(), name='stable-diffusion-text-api' ),
+    path("stable-diffusion-image", views.StableDiffusionImageToImageAPIView.as_view(), name='stable-diffusion-image-api' ),
 ]

@@ -6,22 +6,13 @@ window.addEventListener('load', () => {
     };
   });
 
-  // var imageInput = document.querySelector('input[name="init_image"]')
-  // imageInput.addEventListener('change', (e)=> {
-  //   console.log('preview image')
-  //   var imgSrc = e.target.value
-  //   var previewImg = document.querySelector('#preview_init_image')
-  //   previewImg.src = imgSrc
-  // })
-
   var button = document.querySelector('#text-to-img')
-  console.log('test.js')
   button.addEventListener('click', (e) => {
     console.log('click')
-    var form = $('#stable_form')
+    var form = $('#stable_text-form')
     var serializeArray = form.serialize()
     var ajax_options = {
-      url: '/stable-diffusion',
+      url: '/stable-diffusion-text',
       method: 'POST',
       data: serializeArray,
       statusCode: {
